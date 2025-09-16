@@ -1,0 +1,104 @@
+/* Fundo degradê */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.calculator-container {
+    text-align: center;
+    color: #fff;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Calculadora */
+.calculator {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px 0px;
+    /* padding já ajustado */
+    font-size: 1.5rem;
+    text-align: right;
+    background: #333;
+    color: #fff;
+    outline: none;
+    letter-spacing: 3px;
+    /* 🔹 Espaço entre números */
+}
+
+
+/* Botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #666;
+}
+
+/* Operadores */
+.operator {
+    background: #ff9500;
+}
+
+.operator:hover {
+    background: #e08900;
+}
+
+/* Igual */
+.equal {
+    background: #0072ff;
+    grid-column: span 1;
+}
+
+.equal:hover {
+    background: #005ed6;
+}
+
+/* Zero ocupa duas colunas */
+.zero {
+    grid-column: span 2;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+}
